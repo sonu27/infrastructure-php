@@ -20,7 +20,8 @@ apk --no-cache add \
     libmemcached \
     pcre \
     make \
-    sed
+    sed \
+    icu-dev
 
 # compilation optimisations and no debug symbols
 export CFLAGS="-O2 -g"
@@ -29,7 +30,8 @@ export CFLAGS="-O2 -g"
 docker-php-ext-install \
     pdo \
     pdo_mysql \
-    opcache
+    opcache \
+    intl
 
 # compile custom php extensions
 pecl install xdebug
