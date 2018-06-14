@@ -66,3 +66,6 @@ apk del --no-cache build-dependencies || true
 # install composer
 curl -L -o /usr/local/bin/composer https://getcomposer.org/composer.phar
 chmod +x /usr/local/bin/composer
+
+# disable access log
+sed -i '/access.log/d' /usr/local/etc/php-fpm.d/docker.conf
